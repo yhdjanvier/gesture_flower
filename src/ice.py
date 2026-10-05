@@ -32,3 +32,13 @@ def get_ice_servers(secrets: Mapping) -> list:
         except Exception as exc:
             print(f"[ice] Twilio TURN failed: {exc}")
     return STUN_ONLY + [{"urls": ["stun:stun1.l.google.com:19302"]}]
+
+
+def has_turn(servers: list) -> bool:
+    """True if at least one TURN (relay) server is configured."""
+    for s in servers:
+        urls = s.get("urls") or s.get("url") or []
+        urls = [urls] if isinstance(urls, str) else urls
+        if any(str(u).startswith(("turn:", "turns:")) for u in urls):
+            return True
+    return False
