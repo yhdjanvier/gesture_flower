@@ -15,6 +15,7 @@ import streamlit as st
 from streamlit_webrtc import RTCConfiguration, VideoProcessorBase, WebRtcMode, webrtc_streamer
 
 import config
+from src.ice import get_ice_servers
 from src.inference import ArtifactsMissing, artifacts_ready, get_classifier
 from src.overlay import draw_overlay
 from src.stability import StabilityTracker
@@ -30,7 +31,18 @@ header[data-testid="stHeader"]{display:none}
 video{width:100%;max-height:82vh;background:#000;border-radius:10px}
 </style>""", unsafe_allow_html=True)
 
-RTC = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
+
+
+@st.cache_data(ttl=3000, show_spinner=False)      # TURN credentials expire, so refresh regularly
+def _ice_servers() -> list:
+    try:
+        secrets = dict(st.secrets)
+    except Exception:                              # no secrets file (local run)
+        secrets = {}
+    return get_ice_servers(secrets)
+
+
+RTC = RTCConfiguration({"iceServers": _ice_servers()})
 DISPLAY = {g: i["display"] for g, i in config.GESTURE_INFO.items()}
 
 
