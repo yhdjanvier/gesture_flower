@@ -1,0 +1,9 @@
+,open_palm,fist,peace,thumbs_up,thumbs_down,pointing,rock,ok_sign
+open_palm,45,0,0,0,0,0,0,0
+fist,0,45,0,0,0,0,0,0
+peace,0,0,44,0,0,1,0,0
+thumbs_up,0,0,0,45,0,0,0,0
+thumbs_down,0,0,0,0,45,0,0,0
+pointing,0,0,0,0,0,45,0,0
+rock,0,0,0,0,0,0,45,0
+ok_sign,0,0,0,0,0,0,0,45

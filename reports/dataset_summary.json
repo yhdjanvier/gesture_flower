@@ -1,0 +1,61 @@
+{
+  "raw_rows_after_cleaning": 2400,
+  "feature_dim": 101,
+  "split_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "augmentation": {
+    "copies": 4,
+    "max_rotation_deg": 15.0,
+    "noise_std": 0.02
+  },
+  "model_input_samples": {
+    "train": 8400,
+    "val": 360,
+    "test": 360
+  },
+  "class_distribution": {
+    "train": {
+      "open_palm": 210,
+      "fist": 210,
+      "peace": 210,
+      "thumbs_up": 210,
+      "thumbs_down": 210,
+      "pointing": 210,
+      "rock": 210,
+      "ok_sign": 210
+    },
+    "val": {
+      "open_palm": 45,
+      "fist": 45,
+      "peace": 45,
+      "thumbs_up": 45,
+      "thumbs_down": 45,
+      "pointing": 45,
+      "rock": 45,
+      "ok_sign": 45
+    },
+    "test": {
+      "open_palm": 45,
+      "fist": 45,
+      "peace": 45,
+      "thumbs_up": 45,
+      "thumbs_down": 45,
+      "pointing": 45,
+      "rock": 45,
+      "ok_sign": 45
+    },
+    "total_raw": {
+      "open_palm": 300,
+      "fist": 300,
+      "peace": 300,
+      "thumbs_up": 300,
+      "thumbs_down": 300,
+      "pointing": 300,
+      "rock": 300,
+      "ok_sign": 300
+    }
+  }
+}

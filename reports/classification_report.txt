@@ -1,0 +1,32 @@
+===== VAL =====
+              precision    recall  f1-score   support
+
+   open_palm     1.0000    1.0000    1.0000        45
+        fist     1.0000    1.0000    1.0000        45
+       peace     1.0000    1.0000    1.0000        45
+   thumbs_up     1.0000    1.0000    1.0000        45
+ thumbs_down     1.0000    1.0000    1.0000        45
+    pointing     1.0000    1.0000    1.0000        45
+        rock     1.0000    1.0000    1.0000        45
+     ok_sign     1.0000    1.0000    1.0000        45
+
+    accuracy                         1.0000       360
+   macro avg     1.0000    1.0000    1.0000       360
+weighted avg     1.0000    1.0000    1.0000       360
+
+
+===== TEST =====
+              precision    recall  f1-score   support
+
+   open_palm     1.0000    1.0000    1.0000        45
+        fist     1.0000    1.0000    1.0000        45
+       peace     1.0000    0.9778    0.9888        45
+   thumbs_up     1.0000    1.0000    1.0000        45
+ thumbs_down     1.0000    1.0000    1.0000        45
+    pointing     0.9783    1.0000    0.9890        45
+        rock     1.0000    1.0000    1.0000        45
+     ok_sign     1.0000    1.0000    1.0000        45
+
+    accuracy                         0.9972       360
+   macro avg     0.9973    0.9972    0.9972       360
+weighted avg     0.9973    0.9972    0.9972       360

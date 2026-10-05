@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# IDE
+.idea/
+.vscode/
+# Data: raw webcam landmarks are personal data - keep out of git by default
+data/raw/*.csv
+data/processed/*.npz
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+# OS
+.DS_Store
+Thumbs.db
+# NOTE: models/ and reports/ are intentionally COMMITTED so the app can be deployed.

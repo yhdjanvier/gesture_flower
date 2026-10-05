@@ -1,0 +1,9 @@
+label,train,val,test,total_raw
+open_palm,210,45,45,300
+fist,210,45,45,300
+peace,210,45,45,300
+thumbs_up,210,45,45,300
+thumbs_down,210,45,45,300
+pointing,210,45,45,300
+rock,210,45,45,300
+ok_sign,210,45,45,300
